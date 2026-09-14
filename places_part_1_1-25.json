@@ -1,0 +1,227 @@
+[
+  {
+    "id": 1,
+    "name": "Victoria Memorial",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Memorial,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Memorial_Hall,_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoria_Memorial_Kolkata.jpg",
+    "ticketPrice": "Garden: ₹30 | Museum: ₹50",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹60 | প্রায় 1–2 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 15–25 মিনিট"
+  },
+  {
+    "id": 2,
+    "name": "Indian Museum",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Museum,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Museum_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Museum,_Calcutta.jpg",
+    "ticketPrice": "Indian Adult: ₹75 | Below 18: ₹20",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹50 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 3,
+    "name": "Howrah Bridge",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Howrah_Bridge,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Howrah_Bridge.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Rabindra_Setu.jpg",
+    "ticketPrice": "Free",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹60 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 4,
+    "name": "Belur Math",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Belur_Math_Temple.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Belur_Math.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Belur_Math,_Howrah.jpg",
+    "ticketPrice": "Free",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹60 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 5,
+    "name": "Dakshineswar Kali Temple",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakshineswar_Kali_Temple.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakshineswar_Temple.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakshineswar_Kali_Temple,_Kolkata.jpg",
+    "ticketPrice": "Entry: Free | Special/Other services may have separate charges",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹20–₹40 | প্রায় 0.5–1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 5–10 মিনিট"
+  },
+  {
+    "id": 6,
+    "name": "St. Paul's Cathedral",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Paul%27s_Cathedral,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Paul%27s_Cathedral_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Paul%27s_Cathedral,_Calcutta.jpg",
+    "ticketPrice": "Free",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹50 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 7,
+    "name": "Marble Palace",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Marble_Palace,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Marble_Palace_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Marble_Palace,_Calcutta.jpg",
+    "ticketPrice": "Entry: Free/Permission required",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹60 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 8,
+    "name": "Birla Planetarium",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Birla_Planetarium,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Birla_Planetarium_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Birla_Planetarium,_Calcutta.jpg",
+    "ticketPrice": "প্রদর্শনীভেদে টিকিট পরিবর্তন হতে পারে",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹50 | প্রায় 0.8 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 9,
+    "name": "Science City",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Science_City_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Science_City,_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Science_City_Kolkata_India.jpg",
+    "ticketPrice": "Entry/attraction অনুযায়ী আলাদা টিকিট",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹60 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 10,
+    "name": "Eco Park",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eco_Park,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Eco_Park_New_Town.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Eco_Park_Kolkata.jpg",
+    "ticketPrice": "Park entry: সাধারণত ₹30-এর আশেপাশে | Activities extra",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹60 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 11,
+    "name": "Alipore Zoological Gardens",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alipore_Zoo_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Alipore_Zoological_Gardens.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Calcutta_Zoo.jpg",
+    "ticketPrice": "Indian Adult: প্রায় ₹50 | Children/other categories may vary",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹60 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 12,
+    "name": "Prinsep Ghat",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Prinsep_Ghat_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Prinsep_Ghat.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Princep_Ghat,_Kolkata.jpg",
+    "ticketPrice": "Entry: Free | Boat ride extra",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹60 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 13,
+    "name": "Rabindra Sadan",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rabindra_Sadan,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Rabindra_Sadan.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Rabindra_Sadan_Kolkata.jpg",
+    "ticketPrice": "Entry depends on programme/event",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹20–₹40 | প্রায় 0.5 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 5–10 মিনিট"
+  },
+  {
+    "id": 14,
+    "name": "Nandan",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nandan,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Nandan_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Nandan_Cinema,_Kolkata.jpg",
+    "ticketPrice": "Film/event অনুযায়ী টিকিট",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹20–₹40 | প্রায় 0.5 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 5–10 মিনিট"
+  },
+  {
+    "id": 15,
+    "name": "Academy of Fine Arts",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Academy_of_Fine_Arts,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Academy_of_Fine_Arts_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Academy_of_Fine_Arts,_Calcutta.jpg",
+    "ticketPrice": "Exhibition/show অনুযায়ী",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹20–₹40 | প্রায় 0.5 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 5–10 মিনিট"
+  },
+  {
+    "id": 16,
+    "name": "New Market",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/New_Market,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/New_Market_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Hogg_Market_Kolkata.jpg",
+    "ticketPrice": "Entry: Free",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹20–₹40 | প্রায় 0.5 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 5–10 মিনিট"
+  },
+  {
+    "id": 17,
+    "name": "Shaheed Minar",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shaheed_Minar,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Shaheed_Minar_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Monument_Shaheed_Minar_Kolkata.jpg",
+    "ticketPrice": "Entry: Free",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹20–₹40 | প্রায় 0.8 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 18,
+    "name": "Dharmatala",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dharmatala,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Dharmatala_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Esplanade,_Kolkata.jpg",
+    "ticketPrice": "Entry: Free",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹20–₹40 | প্রায় 0.5 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 5–10 মিনিট"
+  },
+  {
+    "id": 19,
+    "name": "Millennium Park",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Millennium_Park,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Millennium_Park_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Millennium_Park,_Hooghly_River.jpg",
+    "ticketPrice": "Entry: প্রায় ₹10–₹20",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹50 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 20,
+    "name": "Babughat",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Babughat,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Babughat_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Baboo_Ghat_Kolkata.jpg",
+    "ticketPrice": "Entry: Free",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹20–₹40 | প্রায় 0.5 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 5–10 মিনিট"
+  },
+  {
+    "id": 21,
+    "name": "Eden Gardens",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eden_Gardens_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Eden_Gardens.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Eden_Gardens_Stadium.jpg",
+    "ticketPrice": "Match/event অনুযায়ী টিকিট | সাধারণ দর্শন সীমিত",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹50 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 22,
+    "name": "St. John's Church",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/St_John%27s_Church,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/St_John%27s_Church_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/St_John%27s_Church,_Calcutta.jpg",
+    "ticketPrice": "Entry: ছোট donation/permission may apply",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹20–₹40 | প্রায় 0.8 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 23,
+    "name": "Raj Bhavan",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Raj_Bhavan,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Governor_House_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Raj_Bhavan_Kolkata.jpg",
+    "ticketPrice": "Permission/booking required",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹20–₹40 | প্রায় 0.8 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 24,
+    "name": "Town Hall",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Town_Hall,_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Town_Hall_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Town_Hall,_Calcutta.jpg",
+    "ticketPrice": "Museum/event অনুযায়ী টিকিট",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹20–₹40 | প্রায় 0.8 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  },
+  {
+    "id": 25,
+    "name": "Kumartuli",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kumartuli_Kolkata.jpg",
+    "image2": "https://commons.wikimedia.org/wiki/Special:FilePath/Kumartuli,_Kolkata.jpg",
+    "image3": "https://commons.wikimedia.org/wiki/Special:FilePath/Kumartuli_Idol_Makers.jpg",
+    "ticketPrice": "Entry: Free | Workshop/guide may charge",
+    "extraCharges": "🚌 Bus: ₹10–₹20 | 🛺 Auto: ₹30–₹60 | প্রায় 1 কিমি রাস্তা | 🚶 হাঁটা: প্রায় 10–15 মিনিট"
+  }
+]
