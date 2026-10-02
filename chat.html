@@ -90,6 +90,12 @@ body.dark .system{background:#302b20;color:#d4cdb8}
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
 <body>
+<script id="ktg-chat-open-check">
+  // Keep the chat page independent from the data loader. This page does not
+  // require places.json to open; its chat UI works with Socket.IO or offline mode.
+  document.documentElement.classList.add('ktg-chat-page');
+</script>
+
   <main class="chat-app">
     <section class="chat-shell" aria-label="Kolkata Tourist Guide group chat">
       <header class="chat-titlebar">

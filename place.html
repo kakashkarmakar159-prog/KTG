@@ -1640,7 +1640,8 @@ function renderPlace() {
                 <a
                     class="primary"
                     id="chatBtn"
-                    href="chat.html?place=group"
+                    href="./chat.html?place=group&v=20261002"
+                    data-ktg-chat-link="1"
                     style="text-decoration:none;text-align:center;display:inline-flex;align-items:center;justify-content:center;"
                 >
                     💬 Booking / Group Chat
@@ -1968,21 +1969,26 @@ if (hotelBtn) {
 
     if (chatBtn) {
 
-        chatBtn.addEventListener(
-            "click",
-            function () {
-
-                const placeId =
-                    currentPlace && currentPlace.id
-                        ? currentPlace.id
-                        : "group";
-
-                window.location.href =
-                    "chat.html?place=" +
-                    encodeURIComponent(placeId);
-
+        const openKtgChat = function (event) {
+            if (event) {
+                event.preventDefault();
+                event.stopImmediatePropagation();
             }
-        );
+
+            const placeId =
+                currentPlace && currentPlace.id
+                    ? currentPlace.id
+                    : "group";
+
+            const chatUrl =
+                "./chat.html?place=" +
+                encodeURIComponent(placeId) +
+                "&v=20261002";
+
+            window.location.assign(chatUrl);
+        };
+
+        chatBtn.addEventListener("click", openKtgChat, true);
 
     }
 
@@ -2093,11 +2099,11 @@ function joinChat() {
     );
 
 
-    window.location.href =
-        "chat.html?place=" +
-        encodeURIComponent(
-            currentPlace.id
-        );
+    window.location.assign(
+        "./chat.html?place=" +
+        encodeURIComponent(currentPlace.id) +
+        "&v=20261002"
+    );
 
 }
 
