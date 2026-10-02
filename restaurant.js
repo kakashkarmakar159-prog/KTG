@@ -954,10 +954,10 @@
     editElements.forEach((button) => {
       const url =
         `edit.html?type=restaurant` +
-        `&place=${encodeURIComponent(
+        `&placeId=${encodeURIComponent(
           currentPlace?.id || placeId
         )}` +
-        `&restaurant=${encodeURIComponent(id)}`;
+        `&restaurantId=${encodeURIComponent(id)}`;
 
       /*
         If button is an <a>
@@ -2473,8 +2473,11 @@ function openRestaurantEdit(
         return;
     }
 
+    // Use a relative URL so the edit page also works on
+    // GitHub Pages projects hosted inside a repository path
+    // such as /KTG/ instead of only at the domain root.
     window.location.href =
-        `/edit.html?type=restaurant` +
+        `edit.html?type=restaurant` +
         `&placeId=${encodeURIComponent(placeId)}` +
         `&restaurantId=${encodeURIComponent(restaurantId)}`;
 }
