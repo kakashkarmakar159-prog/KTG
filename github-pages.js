@@ -58,7 +58,7 @@
 
     /* Compatibility: old code still requests data/places.json.
        Return the combined 10-file array without changing the UI code. */
-    if(path.endsWith(LEGACY_DATA_PATH) && method==='GET'){
+    if((path === LEGACY_DATA_PATH || path.endsWith(LEGACY_DATA_PATH)) && method==='GET'){
       try{
         return jsonResponse(await getPlaces());
       }catch(e){
