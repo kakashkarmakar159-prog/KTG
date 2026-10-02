@@ -2727,7 +2727,11 @@ body.light {
 <style>
   /* Detail view cleanup requested: the large restaurant hero and quick-info strip
      should not appear above the restaurant's own content. */
+  /* On a selected restaurant, remove the entire top hero/summary area.
+     Keep the restaurant's own content cards below it. */
   body.restaurant-detail-view #restaurantHero,
+  body.restaurant-detail-view .restaurant-hero,
+  body.restaurant-detail-view .restaurant-detail-hero,
   body.restaurant-detail-view .restaurant-quick-info {
     display: none !important;
   }
@@ -6181,6 +6185,9 @@ body.light {
      ========================================================= */
 
   function renderAll() {
+    if (currentRestaurant) {
+      document.body.classList.add("restaurant-detail-view");
+    }
     renderMainImage();
     renderBasicInfo();
     renderLinks();
@@ -6199,6 +6206,14 @@ body.light {
      ========================================================= */
 
   async function initRestaurantPage() {
+    /* The selected-restaurant page must not show the large hero/quick-info
+       section shown on the restaurant list page. */
+    if (restaurantId) {
+      document.body.classList.add("restaurant-detail-view");
+    } else {
+      document.body.classList.remove("restaurant-detail-view");
+    }
+
     showLoading();
 
     try {
