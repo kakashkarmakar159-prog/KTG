@@ -172,7 +172,8 @@ body.dark .system{background:#302b20;color:#d4cdb8}
 /* INTERNAL JS: js/chat.js */
 "use strict";
 
-const socket = (typeof io === "function")
+const isGitHubPages = /(^|\.)github\.io$/i.test(location.hostname);
+const socket = (!isGitHubPages && typeof io === "function")
   ? io({
       reconnection: true,
       reconnectionAttempts: 8,
@@ -389,10 +390,11 @@ socket.on("locationUpdate",m=>{if(!m||m.groupId!==groupId||!m.id)return;location
 socket.on("connect",()=>{if(myName)socket.emit("joinGroup",{groupId,name:myName});});
 socket.on("disconnect",()=>{ /* reconnect handled automatically by Socket.IO */ });
 
-const stored=sessionStorage.getItem("chatName");
-// Always ask on entry as requested. A stored name is offered as a convenient default only.
-if(stored)$("nameInput").value=stored;
-$("nameInput").focus();
+const stored = sessionStorage.getItem("chatName") || localStorage.getItem("ktg_username") || localStorage.getItem("ktg_chat_name") || "Tourist";
+myName = String(stored).trim().slice(0,60) || "Tourist";
+sessionStorage.setItem("chatName", myName);
+$("nameGate").style.display = "none";
+openChat();
 
 </script>
 </body>

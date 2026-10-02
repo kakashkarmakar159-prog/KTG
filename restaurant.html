@@ -2782,6 +2782,13 @@ body.light {
 
 </head>
 
+<style id="ktg-restaurant-top-remove">
+/* Selected restaurant page: the dynamic hero/summary area is intentionally removed.
+   The existing white information cards below remain unchanged. */
+#restaurantApp {
+  display: none !important;
+}
+</style>
 
 <body>
 
@@ -4839,7 +4846,7 @@ body.light {
      JAVASCRIPT
 ========================================================= -->
 
-<div id="restaurantApp"></div>
+<div id="restaurantApp" style="display:none !important;"></div>
 
 <script src="github-pages.js"></script>
 <script>
