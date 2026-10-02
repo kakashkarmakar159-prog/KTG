@@ -2725,6 +2725,16 @@ body.light {
 </style>
 
 
+
+<style id="ktg-restaurant-detail-cleanup">
+/* KTG: On a single restaurant detail page, remove ONLY the
+   upper hero and four quick-information boxes. Keep all
+   sections beginning with About Restaurant exactly as they are. */
+body.ktg-single-restaurant #restaurantHero,
+body.ktg-single-restaurant .restaurant-quick-info {
+  display: none !important;
+}
+</style>
 </head>
 
 
@@ -7996,6 +8006,24 @@ function injectRestaurantStyles() {
 }
 </script>
 
+
+
+<script id="ktg-single-restaurant-cleanup-js">
+(function () {
+  function markSingleRestaurantPage() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var rid = params.get("restaurantId") || params.get("restaurant");
+      if (rid) document.body.classList.add("ktg-single-restaurant");
+    } catch (e) {}
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", markSingleRestaurantPage);
+  } else {
+    markSingleRestaurantPage();
+  }
+})();
+</script>
 
 </body>
 </html>
