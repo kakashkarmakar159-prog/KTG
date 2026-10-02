@@ -90,12 +90,6 @@ body.dark .system{background:#302b20;color:#d4cdb8}
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
 <body>
-<script id="ktg-chat-open-check">
-  // Keep the chat page independent from the data loader. This page does not
-  // require places.json to open; its chat UI works with Socket.IO or offline mode.
-  document.documentElement.classList.add('ktg-chat-page');
-</script>
-
   <main class="chat-app">
     <section class="chat-shell" aria-label="Kolkata Tourist Guide group chat">
       <header class="chat-titlebar">
@@ -166,14 +160,14 @@ body.dark .system{background:#302b20;color:#d4cdb8}
     </div>
   </div>
 
-  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+  <script src="github-pages.js"></script>
+<script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script>
 /* INTERNAL JS: js/chat.js */
 "use strict";
 
-const isGitHubPages = /(^|\.)github\.io$/i.test(location.hostname);
-const socket = (!isGitHubPages && typeof io === "function")
+const socket = (typeof io === "function")
   ? io({
       reconnection: true,
       reconnectionAttempts: 8,
@@ -390,11 +384,10 @@ socket.on("locationUpdate",m=>{if(!m||m.groupId!==groupId||!m.id)return;location
 socket.on("connect",()=>{if(myName)socket.emit("joinGroup",{groupId,name:myName});});
 socket.on("disconnect",()=>{ /* reconnect handled automatically by Socket.IO */ });
 
-const stored = sessionStorage.getItem("chatName") || localStorage.getItem("ktg_username") || localStorage.getItem("ktg_chat_name") || "Tourist";
-myName = String(stored).trim().slice(0,60) || "Tourist";
-sessionStorage.setItem("chatName", myName);
-$("nameGate").style.display = "none";
-openChat();
+const stored=sessionStorage.getItem("chatName");
+// Always ask on entry as requested. A stored name is offered as a convenient default only.
+if(stored)$("nameInput").value=stored;
+$("nameInput").focus();
 
 </script>
 </body>

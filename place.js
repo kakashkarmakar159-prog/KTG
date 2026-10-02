@@ -237,22 +237,6 @@ function renderPlace() {
 
 
     /* ---------------------------------------------
-       DIRECT CHAT LINK
-       Use a real link so GitHub Pages opens chat even if
-       another optional script/listener fails later.
-    --------------------------------------------- */
-
-    const directChatBtn = document.getElementById("chatBtn");
-    if (directChatBtn) {
-        const chatPlaceId = currentPlace && currentPlace.id
-            ? currentPlace.id
-            : "group";
-        directChatBtn.href =
-            "chat.html?place=" + encodeURIComponent(chatPlaceId);
-    }
-
-
-    /* ---------------------------------------------
        IMAGE
     --------------------------------------------- */
 
@@ -473,14 +457,13 @@ function renderPlace() {
             >
 
 
-                <a
+                <button
                     class="primary"
                     id="chatBtn"
-                    href="chat.html?place=group"
-                    style="text-decoration:none;text-align:center;display:inline-flex;align-items:center;justify-content:center;"
+                    type="button"
                 >
                     💬 Booking / Group Chat
-                </a>
+                </button>
 
 
                 <button

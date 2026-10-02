@@ -2727,68 +2727,14 @@ body.light {
 <style>
   /* Detail view cleanup requested: the large restaurant hero and quick-info strip
      should not appear above the restaurant's own content. */
-  /* On a selected restaurant, remove the entire top hero/summary area.
-     Keep the restaurant's own content cards below it. */
   body.restaurant-detail-view #restaurantHero,
-  body.restaurant-detail-view .restaurant-hero,
-  body.restaurant-detail-view .restaurant-detail-hero,
   body.restaurant-detail-view .restaurant-quick-info {
     display: none !important;
   }
 </style>
 
-
-<style id="ktg-restaurant-hard-cleanup">
-  /* The selected restaurant page intentionally starts at About Restaurant.
-     The hero and four dark summary boxes are not part of this detail view. */
-  #restaurantHero,
-  .restaurant-hero,
-  .restaurant-detail-hero,
-  .restaurant-quick-info { display:none !important; }
-  html.ktg-restaurant-detail #restaurantApp { display:none !important; }
-</style>
-
-<style id="ktg-restaurant-detail-cleanup">
-  /* Selected restaurant view: remove ONLY the upper hero and the four quick-info boxes.
-     Keep About, Gallery, Specialties, Facilities, Opening Hours, Location and Contact. */
-  html.ktg-restaurant-detail #restaurantHero,
-  html.ktg-restaurant-detail .restaurant-hero,
-  html.ktg-restaurant-detail .restaurant-detail-hero,
-  html.ktg-restaurant-detail .restaurant-quick-info {
-    display: none !important;
-  }
-  html.ktg-restaurant-detail .restaurant-content-grid {
-    margin-top: 0 !important;
-  }
-</style>
-<script>
-  (function () {
-    try {
-      var q = new URLSearchParams(window.location.search);
-      var isRestaurantDetail = !!(
-        q.get('restaurant') ||
-        q.get('restaurantId') ||
-        q.get('rid') ||
-        q.get('id') ||
-        q.get('place') ||
-        q.get('placeId')
-      );
-      if (isRestaurantDetail) {
-        document.documentElement.classList.add('ktg-restaurant-detail');
-      }
-    } catch (e) {}
-  })();
-</script>
-
 </head>
 
-<style id="ktg-restaurant-top-remove">
-/* Selected restaurant page: the dynamic hero/summary area is intentionally removed.
-   The existing white information cards below remain unchanged. */
-#restaurantApp {
-  display: none !important;
-}
-</style>
 
 <body>
 
@@ -2868,6 +2814,262 @@ body.light {
     </button>
 
   </div>
+
+
+
+  <!-- =======================================================
+       RESTAURANT HERO
+  ======================================================== -->
+
+  <section
+    id="restaurantHero"
+    class="restaurant-hero"
+  >
+
+    <!-- JS will populate restaurant image -->
+
+    <div class="restaurant-hero-image-wrapper">
+
+      <img
+        id="restaurantMainImage"
+        class="restaurant-main-image"
+        src=""
+        alt="Restaurant"
+      >
+
+      <div
+        id="restaurantImageFallback"
+        class="restaurant-image-fallback"
+        hidden
+      >
+        🍽️
+      </div>
+
+    </div>
+
+
+
+    <div class="restaurant-hero-content">
+
+      <div class="restaurant-badge-row">
+
+        <span class="restaurant-badge">
+          🍽️ Restaurant
+        </span>
+
+        <span
+          id="restaurantCuisineBadge"
+          class="restaurant-cuisine-badge"
+        >
+          Cuisine
+        </span>
+
+      </div>
+
+
+
+      <h1
+        id="restaurantName"
+        class="restaurant-name"
+      >
+        Restaurant
+      </h1>
+
+
+
+      <p
+        id="restaurantDescription"
+        class="restaurant-description"
+      >
+        Discover this restaurant in Kolkata.
+      </p>
+
+
+
+      <!-- Rating -->
+
+      <div class="restaurant-rating-row">
+
+        <span class="restaurant-stars">
+          ★★★★★
+        </span>
+
+        <strong
+          id="restaurantRating"
+        >
+          0.0
+        </strong>
+
+        <span
+          id="restaurantReviews"
+          class="restaurant-review-count"
+        >
+          0 Reviews
+        </span>
+
+      </div>
+
+
+
+      <!-- Location -->
+
+      <div class="restaurant-location">
+
+        <span class="restaurant-location-icon">
+          📍
+        </span>
+
+        <span id="restaurantAddress">
+          Kolkata
+        </span>
+
+      </div>
+
+
+
+      <!-- =================================================
+           ACTION BUTTONS
+      ================================================== -->
+
+      <div class="restaurant-action-buttons">
+
+
+        <!-- BOOK BUTTON -->
+
+        <button
+          type="button"
+          id="bookRestaurantBtn"
+          class="restaurant-book-now"
+          data-action="book-restaurant"
+        >
+          🍽️ Book Restaurant
+        </button>
+
+
+
+        <!-- EDIT BUTTON -->
+
+        <button
+          type="button"
+          id="editRestaurantBtn"
+          class="restaurant-edit-btn"
+          data-action="edit-restaurant"
+        >
+          ✏️ Edit
+        </button>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       QUICK INFORMATION
+  ======================================================== -->
+
+  <section class="restaurant-quick-info">
+
+
+    <!-- Cuisine -->
+
+    <div class="restaurant-info-item">
+
+      <div class="restaurant-info-icon">
+        🍛
+      </div>
+
+      <div>
+
+        <span>
+          Cuisine
+        </span>
+
+        <strong id="quickCuisine">
+          —
+        </strong>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Price -->
+
+    <div class="restaurant-info-item">
+
+      <div class="restaurant-info-icon">
+        💰
+      </div>
+
+      <div>
+
+        <span>
+          Price Range
+        </span>
+
+        <strong id="quickPrice">
+          —
+        </strong>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Metro -->
+
+    <div class="restaurant-info-item">
+
+      <div class="restaurant-info-icon">
+        🚇
+      </div>
+
+      <div>
+
+        <span>
+          Nearest Metro
+        </span>
+
+        <strong id="quickMetro">
+          —
+        </strong>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Opening -->
+
+    <div class="restaurant-info-item">
+
+      <div class="restaurant-info-icon">
+        🕐
+      </div>
+
+      <div>
+
+        <span>
+          Opening
+        </span>
+
+        <strong id="quickOpening">
+          —
+        </strong>
+
+      </div>
+
+    </div>
+
+
+  </section>
 
 
 
@@ -4846,7 +5048,7 @@ body.light {
      JAVASCRIPT
 ========================================================= -->
 
-<div id="restaurantApp" style="display:none !important;"></div>
+<div id="restaurantApp"></div>
 
 <script src="github-pages.js"></script>
 <script>
@@ -5979,9 +6181,6 @@ body.light {
      ========================================================= */
 
   function renderAll() {
-    if (currentRestaurant) {
-      document.body.classList.add("restaurant-detail-view");
-    }
     renderMainImage();
     renderBasicInfo();
     renderLinks();
@@ -6000,14 +6199,6 @@ body.light {
      ========================================================= */
 
   async function initRestaurantPage() {
-    /* The selected-restaurant page must not show the large hero/quick-info
-       section shown on the restaurant list page. */
-    if (restaurantId) {
-      document.body.classList.add("restaurant-detail-view");
-    } else {
-      document.body.classList.remove("restaurant-detail-view");
-    }
-
     showLoading();
 
     try {

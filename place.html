@@ -1170,7 +1170,7 @@ body.light .question-row input {
   <div class="modal-card">
     <h2>Please enter your name</h2>
     <input id="nameInput" class="full-input" placeholder="Your name">
-    <button id="joinChatBtn" class="primary" type="button" onclick="window.location.href='chat.html?place=group';">Continue / Join Chat</button>
+    <button id="joinChatBtn" class="primary">Continue / Join Chat</button>
   </div>
 </div>
 
@@ -1637,15 +1637,13 @@ function renderPlace() {
             >
 
 
-                <a
+                <button
                     class="primary"
                     id="chatBtn"
-                    href="./chat.html?place=group"
-                    data-ktg-chat-link="1"
-                    style="text-decoration:none;text-align:center;display:inline-flex;align-items:center;justify-content:center;"
+                    type="button"
                 >
                     💬 Booking / Group Chat
-                </a>
+                </button>
 
 
                 <button
@@ -1969,26 +1967,21 @@ if (hotelBtn) {
 
     if (chatBtn) {
 
-        const openKtgChat = function (event) {
-            if (event) {
-                event.preventDefault();
-                event.stopImmediatePropagation();
+        chatBtn.addEventListener(
+            "click",
+            function () {
+
+                const placeId =
+                    currentPlace && currentPlace.id
+                        ? currentPlace.id
+                        : "group";
+
+                window.location.href =
+                    "chat.html?place=" +
+                    encodeURIComponent(placeId);
+
             }
-
-            const placeId =
-                currentPlace && currentPlace.id
-                    ? currentPlace.id
-                    : "group";
-
-            const chatUrl =
-                "./chat.html?place=" +
-                encodeURIComponent(placeId) +
-                "&v=20261002";
-
-            window.location.assign(chatUrl);
-        };
-
-        chatBtn.addEventListener("click", openKtgChat, true);
+        );
 
     }
 
@@ -2099,11 +2092,11 @@ function joinChat() {
     );
 
 
-    window.location.assign(
-        "./chat.html?place=" +
-        encodeURIComponent(currentPlace.id) +
-        "&v=20261002"
-    );
+    window.location.href =
+        "chat.html?place=" +
+        encodeURIComponent(
+            currentPlace.id
+        );
 
 }
 
