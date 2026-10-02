@@ -1,0 +1,2 @@
+Restaurant detail: removed the entire top restaurant hero and the four dark summary boxes from the static detail page. Kept About, Gallery, Specialties, Facilities, Opening Hours, Location and Contact.
+Chat: chat page no longer depends on github-pages.js; the Place page chat button has a direct navigation fallback so it opens even if another script has an error.
