@@ -91,11 +91,11 @@ const DATA_DIR =
 
 const DATA_FILES = Array.from(
   { length: 10 },
-  (_, index) =>
-    path.join(
-      DATA_DIR,
-      `places-${index + 1}.json`
-    )
+  (_, index) => {
+    const dataPath = path.join(DATA_DIR, `places-${index + 1}.json`);
+    const rootPath = path.join(PUBLIC_DIR, `places-${index + 1}.json`);
+    return fs.existsSync(dataPath) ? dataPath : rootPath;
+  }
 );
 
 

@@ -30,7 +30,7 @@
      CONFIG
      ========================================================= */
 
-  const DATA_URL = "./data/places.json";
+  const DATA_URL = "./places.json";
 
   // If your backend has a restaurant API, this can be used.
   // The script automatically falls back to places.json if API fails.
