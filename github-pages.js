@@ -102,6 +102,12 @@
     const path = absoluteUrl.pathname;
     const method = (init?.method||'GET').toUpperCase();
 
+    /* When a backend origin is configured, let admin API requests go
+       directly to Render instead of being replaced by localStorage. */
+    if (window.KTG_API_ORIGIN && absoluteUrl.origin === window.KTG_API_ORIGIN && path.startsWith('/api/')) {
+      return nativeFetch(input, init);
+    }
+
     /* Old code requests places.json. Always serve the combined
        10-file database instead of the old large file. */
     if(

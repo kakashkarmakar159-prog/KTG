@@ -33,6 +33,11 @@ const { Server } = require("socket.io");
 
 const app = express();
 
+/* Allow the GitHub Pages frontend to call the Render API. */
+const cors = require("cors");
+app.use(cors({ origin: true, credentials: true }));
+app.options("*", cors({ origin: true, credentials: true }));
+
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -320,24 +325,43 @@ function savePlacesData(places) {
   }
 
   const total = places.length;
-  const baseSize = Math.floor(total / DATA_FILES.length);
-  const remainder = total % DATA_FILES.length;
+  const baseSize = Math.floor(total / 10);
+  const remainder = total % 10;
   let offset = 0;
+  const targets = [];
+
+  /*
+     The project contains both /data/places-N.json and root
+     /places-N.json files.  The old saver updated only one set,
+     which made a saved edit disappear when the browser loaded the
+     other set.  Write both sets whenever both exist.
+  */
+  for (let i = 0; i < 10; i++) {
+    const size = baseSize + (i < remainder ? 1 : 0);
+    const chunk = places.slice(offset, offset + size);
+    offset += size;
+
+    const dataTarget = path.join(DATA_DIR, `places-${i + 1}.json`);
+    const rootTarget = path.join(PUBLIC_DIR, `places-${i + 1}.json`);
+
+    if (fs.existsSync(dataTarget) || DATA_FILES[i] === dataTarget) {
+      targets.push({ target: dataTarget, chunk });
+    }
+    if (fs.existsSync(rootTarget)) {
+      targets.push({ target: rootTarget, chunk });
+    }
+  }
+
   const tempFiles = [];
-
   try {
-    for (let i = 0; i < DATA_FILES.length; i++) {
-      const size = baseSize + (i < remainder ? 1 : 0);
-      const chunk = places.slice(offset, offset + size);
-      offset += size;
-
-      const tempFile = DATA_FILES[i] + ".tmp";
+    for (const item of targets) {
+      const tempFile = item.target + `.tmp-${process.pid}-${Date.now()}`;
       fs.writeFileSync(
         tempFile,
-        JSON.stringify(chunk, null, 2) + "\n",
+        JSON.stringify(item.chunk, null, 2) + "\n",
         "utf8"
       );
-      tempFiles.push({ tempFile, target: DATA_FILES[i] });
+      tempFiles.push({ tempFile, target: item.target });
     }
 
     for (const item of tempFiles) {

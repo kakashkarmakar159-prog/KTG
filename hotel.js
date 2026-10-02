@@ -307,7 +307,7 @@ async function verifyHotelEdit(e){
   const expected=getVerificationId(currentHotel);
   if(supplied===MASTER_ADMIN_ID || (expected && supplied===expected)){verifiedEditId=supplied;closeModal($("editAccessModal"));openEditForm();return;}
   try{
-    const r=await fetch("/api/admin/verify",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({editId:supplied,entityType:"hotel",entityId:getHotelId(currentHotel),entityName:currentHotel.name||currentHotel.hotelName,placeId:currentPlace?.id||currentPlace?.placeId||""})});
+    const r=await fetch(window.ktgApiUrl ? window.ktgApiUrl("admin/verify") : "/api/admin/verify",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({editId:supplied,entityType:"hotel",entityId:getHotelId(currentHotel),entityName:currentHotel.name||currentHotel.hotelName,placeId:currentPlace?.id||currentPlace?.placeId||""})});
     const j=await r.json();if(r.ok&&j.success){verifiedEditId=supplied;closeModal($("editAccessModal"));openEditForm();return;}throw new Error(j.message||"Invalid Hotel Verification ID.");
   }catch(err){$("editAccessError").textContent=err.message||"Invalid Hotel Verification ID.";}
 }
@@ -388,7 +388,7 @@ async function saveHotelEdit(e){
 
   const msg=$("saveMessage");msg.textContent="Saving...";
   try{
-    const r=await fetch("/api/admin/entity",{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify({editId:verifiedEditId,entityType:"hotel",entityId:getHotelId(currentHotel),placeId:currentPlace?.id||currentPlace?.placeId||"",entity:updated})});
+    const r=await fetch(window.ktgApiUrl ? window.ktgApiUrl("admin/entity") : "/api/admin/entity",{method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify({editId:verifiedEditId,entityType:"hotel",entityId:getHotelId(currentHotel),placeId:currentPlace?.id||currentPlace?.placeId||"",entity:updated})});
     const j=await r.json().catch(()=>({}));
     if(!r.ok||!j.success) throw new Error(j.message||"Server could not save the hotel.");
     currentHotel=j.entity||updated;

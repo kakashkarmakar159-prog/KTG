@@ -34,7 +34,7 @@
 
   // If your backend has a restaurant API, this can be used.
   // The script automatically falls back to places.json if API fails.
-  const API_BASE = "/api";
+  const API_BASE = window.KTG_API_BASE || "/api";
 
   /* =========================================================
      DOM HELPERS
@@ -955,7 +955,7 @@
       const url =
         `edit.html?type=restaurant` +
         `&placeId=${encodeURIComponent(
-          currentPlace?.id || placeId
+          currentPlace?.id || placeId || ""
         )}` +
         `&restaurantId=${encodeURIComponent(id)}`;
 
@@ -2473,11 +2473,8 @@ function openRestaurantEdit(
         return;
     }
 
-    // Use a relative URL so the edit page also works on
-    // GitHub Pages projects hosted inside a repository path
-    // such as /KTG/ instead of only at the domain root.
     window.location.href =
-        `edit.html?type=restaurant` +
+        `/edit.html?type=restaurant` +
         `&placeId=${encodeURIComponent(placeId)}` +
         `&restaurantId=${encodeURIComponent(restaurantId)}`;
 }
